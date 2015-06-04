@@ -23,7 +23,32 @@ class Article(Base):
 	archiveprefix = Column(String(250))
 	Type          = Column(String(250))
 	Ident         = Column(String(250))
+	address       = Column(String(250))
+	booktitle     = Column(String(250))
+	chapter       = Column(String(250))
+	crossref      = Column(String(250))
+	edition       = Column(String(250))
+	editor        = Column(String(250))
+	Name          = Column(String(250))
+	howpublished  = Column(String(250))
+	institution   = Column(String(250))
+	key           = Column(String(250))
+	month         = Column(String(250))
+	note          = Column(String(250))
+	number        = Column(String(250))
+	organization  = Column(String(250))
+	pages         = Column(String(250))
+	publisher     = Column(String(250))
+	school        = Column(String(250))
+	series        = Column(String(250))
+	volume        = Column(String(250))
 
 engine = create_engine('sqlite:///sqlite_paperscraper.db')
 
 Base.metadata.create_all(engine)
+
+
+#
+## List of fields
+#
+
