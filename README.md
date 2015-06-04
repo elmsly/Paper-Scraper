@@ -11,7 +11,7 @@ First run 'python setup.py'
 ## Basic use
 At present only arxiv numbers can be used to index.
 
-Run 'python PaperScraper.py <ARXIVNUMBER>'
+Run 'python PaperScraper.py _ARXIVNUMBER_'
 
 
 ## Known issues
