@@ -11,10 +11,12 @@ First run 'python setup.py'
 ## Basic use
 At present only arxiv numbers can be used to index.
 
-Run 'python PaperScraper.py <ARXIVNUMBER>'
+Run 'python PaperScraper.py _ARXIVNUMBER_'
 
 
 ## Known issues
 Need to ensure that all possible bibtex entries are in Article model. There will be a clever to do this with post_init signals that I'll look into.
 
 Need to add search features and DOI lookups.
+
+Use this instead of string stripping: http://inspirehep.net/info/hep/api?ln=en
