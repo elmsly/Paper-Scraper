@@ -20,7 +20,7 @@ import json
 
 class SpiresSearch():
   inspire_url="http://www.inspirehep.net/search?"
-  static_options={"of":"recjson","ot":"recid,authors,title,doi,system_control_number,journal_info,year"}
+  static_options={"of":"recjson","ot":"recid,authors,title,doi,system_control_number,journal_info,year,prepublication,publication_info"}
 
   def __init__(self,search_string,chunk_size=25,jump=1):
 
