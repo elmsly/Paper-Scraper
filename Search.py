@@ -1,7 +1,7 @@
 import requests
 import bibtexparser
-from HTMLParser import HTMLParser
 import json
+from Models import *
 
 #testRequest = requests.get("http://inspirehep.net/search?ln=en&ln=en&p=find+eprint+1506.01386&of=hx&action_search=Search&sf=earliestdate&so=d&rm=&rg=25&sc=0")
 
@@ -134,34 +134,6 @@ class SpiresSearch():
 #class SpiresBibtexDoiSearch(SpiresBibtexSearch):
 #	def __init__(self,doi):
 #		SpiresBibtexSearch.__init__(self,"find doi+"+doi)
-
-
-class SpiresHTMLParser(HTMLParser):
-	def __init__(self,data_format):
-		HTMLParser.__init__(self)
-		self.pre_flag=False
-		self.data_format=data_format
-		self.record_tag=data_format.record_tag
-
-	def get_tag_data(self,text):
-		self.results=[]
-		self.feed(text)
-		return self.results
-
-	def handle_starttag(self,tag,attrs):
-		if tag==self.record_tag:
-#			print "found start-tag "+tag
-			self.pre_flag=True
-
-	def handle_endtag(self,tag):
-		if tag==self.record_tag:
-#			print "found end-tag "+tag
-			self.pre_flag=False
-
-	def handle_data(self,data):
-		if self.pre_flag:
-			print "Found bibtex: "+data
-			self.results.append(data)
 
 
 #test_search=SpiresBibtexEprintSearch("0709.2877")

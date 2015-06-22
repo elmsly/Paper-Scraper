@@ -1,5 +1,4 @@
-from search import *
-from PS_DBgen import *
+from Search import *
 
 test_search=SpiresSearch("find+a+gardi")
 result=test_search.parse_result()
